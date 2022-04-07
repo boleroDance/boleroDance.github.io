@@ -1,29 +1,28 @@
 # Site settings
-title: BY Blog
-SEOTitle: 柏荧的博客 | BY Blog
+title: boleroDance's Tech Blog
+SEOTitle: 波麗露的博客 | BD Blog
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
-description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+email: veiiki@qq.com
+description: "一往无前，曾经撞倒三座电线杆！"
+keyword: "BD, BD Blog, 波麗露的博客, boleroDance, 波麗露, iOS, Apple, iPhone"
+url: "https://bolerodance.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/boleroDance/boleroDance.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "今天的天气...嗯...适合敲代码!"
 sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
+# weibo_username:     BoleroDance
 zhihu_username:     qiubaiying
-github_username:    qiubaiying
+github_username:    boleroDance
 facebook_username:  baiying.qiu.7
 jianshu_username:   e71990ada2fd
-#twitter_username:   qiubaiying
 
 
 
