@@ -4,7 +4,8 @@ title:      Javascript基本概念与运算操作符
 subtitle:   JS核心语法梳理
 date:       2022-03-13
 author:     bolero
-header-img: "img/post-bg-ios9-web.jpg"
+header-img: img/post-bg-re-vs-ng2.jpg
+catalog:    true
 tags:
     - JavaScript
 ---
