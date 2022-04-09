@@ -410,6 +410,8 @@ alert(user.isAdmin); // false
 1. 一个新的空对象被创建并分配给 `this`。
 2. 函数体执行。通常它会修改 `this`，为其添加新的属性。
 3. 返回 `this` 的值。
+4. 如果通过显示返回，返回值是个非对象类型的数据，如`return 0`, 那么还是正常返回this。
+5. 如果通过显示返回，写了对象类型的返回值，那么就返回这个显示声明的对象。
 
 构造器比每次都使用字面量创建要短得多，而且更易于阅读——实现可重用的对象创建代码
 
@@ -478,7 +480,7 @@ console.log(Person.prototype.__proto__) // Object
 
 - Object的实例的原型没有原型
 
-所有对象都是Object对象的实例，包括原型对象，因此原型的回溯最多到Object实例的原型为止，也就是原型对象的C:\Users\THINKPAD\Desktop\codC:\Users\THINKPAD\Desktop\coding\JSreview\函数和对象.htmling\JSreview\函数和对象.html原型为止
+所有对象都是Object对象的实例，包括原型对象，因此原型的回溯最多到Object实例的原型为止，也就是原型对象的原型为止
 
 ```
   var a = new Object();
