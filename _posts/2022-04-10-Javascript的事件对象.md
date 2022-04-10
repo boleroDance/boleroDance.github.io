@@ -367,4 +367,48 @@ elem.addEventListener(..., true)
   new Menu(menu);
 </script>
 ```
+###### 行为模式
 
+我们还可以使用事件委托将“行为（behavior）”以 **声明方式** 添加到具有特殊特性（attribute）和类的元素中。
+
+行为模式分为两个部分：
+
+1. 我们将自定义特性添加到描述其行为的元素。
+2. 用文档范围级的处理程序追踪事件，如果事件发生在具有特定特性的元素上 —— 则执行行为（action）。
+
+通过计数器案例理解行为模式：
+
+```javascript
+<body>
+  Counter: <input type="button" value="1" data-counter>
+  Another counter: <input type="button" value="2" data-counter>
+  the third counter <input type="button" value="3">
+</body>
+
+  document.addEventListener('click', function(event) {
+    if(event.target.dataset.counter != undefined) {
+      event.target.value++
+    } else {
+      console.log('no attribute')
+    }
+  })
+```
+
+如果我们点击前两个按钮 —— 它的值就会增加，第三个按钮打印no attribute
+
+可见，我们将事件处理程序分配给 `document` 对象，利用`event.target`追踪到具体元素，再而为具有特定特性的元素执行行为。
+
+###### 总结事件委托
+
+它通常用于为许多相似的元素添加相同的处理，但不仅限于此
+
+算法：
+
+1. 在容器（container）上放一个处理程序。
+2. 在处理程序中 —— 检查源元素 `event.target`。
+3. 如果事件发生在我们感兴趣的元素内，那么处理该事件。
+
+
+
+参考
+[事件简介](https://zh.javascript.info/event-delegation)
