@@ -103,6 +103,37 @@ console.log(rabbit instanceof Animal) // true
 
 ![](https://zh.javascript.info/article/instanceof/instanceof.svg)
 
+**手写instanceOf**
+
+其逻辑在于遍历左边obj的原型链，直到等于右边类的`prototype`, 返回`ture`
+
+```javascript
+function instanceOf(obj, class) {
+    if (typeof class !== 'function' || typeof obj !== 'obj') {
+       return false 
+    }
+    const prototype = class.prototype
+    
+    while (obj !== null) {
+        if (obj === prototype) {
+            return true
+        }
+      	obj = obj.__proto__
+    }
+    return false
+}
+
+function A() {}
+const a = new A()
+
+class Animal {}
+class Rabbit extends Animal {}
+let rabbit = new Rabbit()
+
+console.log(instanceOf(a, A)) // true
+console.log(instanceOf(rabbit, Animal)) // true
+```
+
 **`Object.prototype.toString.call()`**
 
 在内部，`toString` 的算法会检查 `this`，并返回相应的结果
